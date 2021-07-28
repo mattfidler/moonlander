@@ -1,6 +1,6 @@
-setwd("~/qmk_firmware/keyboards/planck/ez/glow/keymaps/mattfidler")
+setwd("~/qmk_firmware/keyboards/moonlander/keymaps/mattfidler")
 
-zip <- file.info(list.files("~/Downloads", pattern="planck_ez_glow.*[.]zip$", full.names = TRUE))
+zip <- file.info(list.files("~/Downloads", pattern="moonlander.*[.]zip$", full.names = TRUE))
 zip <- rownames(zip)[which.max(zip$mtime)]
 
 temp.dir <- tempfile("keymap")
