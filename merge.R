@@ -57,4 +57,5 @@ if (length(w) > 1 && regexpr("on_dance_", keymap.c[w[1] - 2]) != -1 && keymap.c[
 
 writeLines(keymap.c, "keymap.c")
 writeLines(readLines(file.path(key.source, "rules.mk")), "rules.mk")
-writeLines(readLines(file.path(key.source, "config.h")), "config.h")
+writeLines(c(readLines(file.path(key.source, "config.h")),
+             "#define TAPPING_TERM_PER_KEY"), "config.h")
