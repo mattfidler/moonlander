@@ -58,6 +58,13 @@ enum custom_keycodes {
   ST_MACRO_9,
   ST_MACRO_10,
   ST_MACRO_11,
+  ST_MACRO_12,
+  ST_MACRO_13,
+  ST_MACRO_14,
+  ST_MACRO_15,
+  ST_MACRO_16,
+  ST_MACRO_17,
+  ST_MACRO_18,
 };
 
 
@@ -70,7 +77,7 @@ enum tap_dance_codes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
-    KC_TRANSPARENT, TD(DANCE_0),    KC_W,           KC_F,           LT(12,KC_P),    KC_G,           KC_TRANSPARENT,                                 KC_TRANSPARENT, TD(DANCE_2),    LT(11,KC_L),    KC_U,           KC_Y,           KC_QUOTE,       KC_TRANSPARENT, 
+    KC_TRANSPARENT, TD(DANCE_0),    KC_W,           LT(14,KC_F),    LT(12,KC_P),    KC_G,           KC_TRANSPARENT,                                 KC_TRANSPARENT, TD(DANCE_2),    LT(11,KC_L),    LT(13,KC_U),    KC_Y,           KC_QUOTE,       KC_TRANSPARENT, 
     KC_TRANSPARENT, LGUI_T(KC_A),   LALT_T(KC_R),   LCTL_T(KC_S),   LSFT_T(KC_T),   KC_D,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_H,           RSFT_T(KC_N),   RCTL_T(KC_E),   RALT_T(KC_I),   RGUI_T(KC_O),   KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_Z,           RALT_T(KC_X),   KC_C,           TD(DANCE_1),    KC_B,           KC_TRANSPARENT,                                                                 KC_TRANSPARENT, TD(DANCE_3),    LT(10,KC_M),    KC_COMMA,       LALT_T(KC_DOT), KC_SLASH,       KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, LT(8,KC_DELETE),LT(6,KC_BSPACE),LT(7,KC_ENTER),                                 LT(3,KC_TAB),   LT(1,KC_SPACE), LT(5,KC_ESCAPE),KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
@@ -158,18 +165,34 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [11] = LAYOUT_moonlander(
-    KC_TRANSPARENT, KC_NO,          KC_NO,          ST_MACRO_0,     KC_NO,          KC_NO,          KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_NO,          KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, 
-    KC_TRANSPARENT, ST_MACRO_1,     ST_MACRO_2,     ST_MACRO_3,     ST_MACRO_4,     ST_MACRO_5,     KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_NO,          KC_RSHIFT,      KC_RCTRL,       KC_RALT,        KC_RGUI,        KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_NO,          KC_NO,          ST_MACRO_6,     KC_NO,          ST_MACRO_7,     KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_NO,          KC_NO,          ST_MACRO_0,     ST_MACRO_1,     KC_NO,          KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_NO,          KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, 
+    KC_TRANSPARENT, ST_MACRO_2,     ST_MACRO_3,     ST_MACRO_4,     ST_MACRO_5,     ST_MACRO_6,     KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_NO,          KC_NO,          ST_MACRO_7,     KC_NO,          ST_MACRO_8,     KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [12] = LAYOUT_moonlander(
     KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, KC_NO,          KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_LGUI,        KC_LCTRL,       KC_LCTRL,       KC_LSHIFT,      KC_NO,          KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_NO,          ST_MACRO_8,     KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_NO,          KC_NO,          ST_MACRO_9,     ST_MACRO_10,    KC_NO,          KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,                                          ST_MACRO_11,    KC_NO,          KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_NO,          ST_MACRO_9,     KC_NO,          ST_MACRO_10,    KC_NO,          KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_NO,          KC_NO,          ST_MACRO_11,    ST_MACRO_12,    KC_NO,          KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,                                          ST_MACRO_13,    KC_NO,          KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
+  ),
+  [13] = LAYOUT_moonlander(
+    KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          ST_MACRO_14,    KC_NO,          KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_NO,          KC_NO,          KC_TRANSPARENT, KC_NO,          KC_NO,          KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_NO,          ST_MACRO_15,    ST_MACRO_16,    KC_NO,          KC_NO,          KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
+  ),
+  [14] = LAYOUT_moonlander(
+    KC_TRANSPARENT, KC_NO,          KC_NO,          KC_TRANSPARENT, KC_NO,          KC_NO,          KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_NO,          KC_NO,          ST_MACRO_17,    KC_NO,          KC_NO,          KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,                                          ST_MACRO_18,    KC_NO,          KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
@@ -262,75 +285,109 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_1:
     if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_A)) SS_LSFT(SS_TAP(X_I)) SS_LSFT(SS_TAP(X_C)));
+      SEND_STRING(SS_LSFT(SS_TAP(X_P)) SS_LSFT(SS_TAP(X_M)) SS_LSFT(SS_TAP(X_X)));
 
     }
     break;
     case ST_MACRO_2:
     if (record->event.pressed) {
-if (record->tap.count > 0) {
-      if (get_mods() & MOD_BIT(KC_RALT)) {
-        SEND_STRING("REAL");
-      } else { SEND_STRING("RxODE");}
-      } else {SEND_STRING("RxODE");}
+      SEND_STRING(SS_LSFT(SS_TAP(X_A)) SS_LSFT(SS_TAP(X_I)) SS_LSFT(SS_TAP(X_C)));
 
     }
     break;
     case ST_MACRO_3:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_S) SS_TAP(X_E) SS_TAP(X_X) SS_TAP(X_P));
+      SEND_STRING(SS_LSFT(SS_TAP(X_R)) SS_TAP(X_X) SS_LSFT(SS_TAP(X_O)) SS_LSFT(SS_TAP(X_D)) SS_LSFT(SS_TAP(X_E)));
 
     }
     break;
     case ST_MACRO_4:
     if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_T)) SS_LSFT(SS_TAP(X_R)) SS_LSFT(SS_TAP(X_U)) SS_LSFT(SS_TAP(X_E)));
+      SEND_STRING(SS_LSFT(SS_TAP(X_S)) SS_LSFT(SS_TAP(X_E)) SS_LSFT(SS_TAP(X_X)) SS_LSFT(SS_TAP(X_P)));
 
     }
     break;
     case ST_MACRO_5:
     if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_D)) SS_LSFT(SS_TAP(X_R)) SS_LSFT(SS_TAP(X_A)) SS_LSFT(SS_TAP(X_F)) SS_LSFT(SS_TAP(X_T)));
+      SEND_STRING(SS_LSFT(SS_TAP(X_T)) SS_LSFT(SS_TAP(X_R)) SS_LSFT(SS_TAP(X_U)) SS_LSFT(SS_TAP(X_E)));
 
     }
     break;
     case ST_MACRO_6:
     if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_C)) SS_LSFT(SS_TAP(X_R)) SS_LSFT(SS_TAP(X_A)) SS_LSFT(SS_TAP(X_N)));
+      SEND_STRING(SS_LSFT(SS_TAP(X_D)) SS_LSFT(SS_TAP(X_R)) SS_LSFT(SS_TAP(X_A)) SS_LSFT(SS_TAP(X_F)) SS_LSFT(SS_TAP(X_T)));
 
     }
     break;
     case ST_MACRO_7:
     if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_B)) SS_LSFT(SS_TAP(X_I)) SS_LSFT(SS_TAP(X_C)));
+      SEND_STRING(SS_LSFT(SS_TAP(X_C)) SS_LSFT(SS_TAP(X_R)) SS_LSFT(SS_TAP(X_A)) SS_LSFT(SS_TAP(X_N)));
 
     }
     break;
     case ST_MACRO_8:
     if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_N)) SS_LSFT(SS_TAP(X_U)) SS_LSFT(SS_TAP(X_L)) SS_LSFT(SS_TAP(X_L)));
+      SEND_STRING(SS_LSFT(SS_TAP(X_B)) SS_LSFT(SS_TAP(X_I)) SS_LSFT(SS_TAP(X_C)));
 
     }
     break;
     case ST_MACRO_9:
     if (record->event.pressed) {
-      SEND_STRING("matthew.fidler@gmail.com");
+      SEND_STRING(SS_LSFT(SS_TAP(X_N)) SS_LSFT(SS_TAP(X_U)) SS_LSFT(SS_TAP(X_L)) SS_LSFT(SS_TAP(X_L)));
 
     }
     break;
     case ST_MACRO_10:
     if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_5)) SS_LSFT(SS_TAP(X_DOT)) SS_LSFT(SS_TAP(X_5)));
+      SEND_STRING("INTEGER");
 
     }
     break;
     case ST_MACRO_11:
     if (record->event.pressed) {
-if (record->tap.count > 0) {
-      if (get_mods() & MOD_BIT(KC_LALT)) {
-        SEND_STRING("->");
-      } else { SEND_STRING("<-");}
-      } else {SEND_STRING("<-");}
+      SEND_STRING("matthew.fidler@gmail.com");
+
+    }
+    break;
+    case ST_MACRO_12:
+    if (record->event.pressed) {
+      SEND_STRING(SS_LSFT(SS_TAP(X_5)) SS_LSFT(SS_TAP(X_DOT)) SS_LSFT(SS_TAP(X_5)));
+
+    }
+    break;
+    case ST_MACRO_13:
+    if (record->event.pressed) {
+      SEND_STRING(SS_LSFT(SS_TAP(X_COMMA)) SS_TAP(X_MINUS));
+
+    }
+    break;
+    case ST_MACRO_14:
+    if (record->event.pressed) {
+      SEND_STRING("PROTECT");
+
+    }
+    break;
+    case ST_MACRO_15:
+    if (record->event.pressed) {
+      SEND_STRING(SS_LSFT(SS_TAP(X_R)) SS_LSFT(SS_TAP(X_E)) SS_LSFT(SS_TAP(X_A)) SS_LSFT(SS_TAP(X_L)));
+
+    }
+    break;
+    case ST_MACRO_16:
+    if (record->event.pressed) {
+      SEND_STRING(SS_LSFT(SS_TAP(X_S)) SS_LSFT(SS_TAP(X_X)) SS_LSFT(SS_TAP(X_P)));
+
+    }
+    break;
+    case ST_MACRO_17:
+    if (record->event.pressed) {
+      SEND_STRING("matt.fidler@novartis.com");
+
+    }
+    break;
+    case ST_MACRO_18:
+    if (record->event.pressed) {
+      SEND_STRING(SS_TAP(X_MINUS) SS_LSFT(SS_TAP(X_DOT)));
 
     }
     break;
@@ -348,47 +405,51 @@ if (record->tap.count > 0) {
 #define HM_E RCTL_T(KC_E)
 #define HM_I RALT_T(KC_I)
 #define HM_O RGUI_T(KC_O)
-#define LT_SPC LT(1,KC_SPACE)
+#define LYT_SPC LT(1,KC_SPACE)
+#define LYT_L LT(11,KC_L)
+#define LYT_U LT(13,KC_U)
+#define LYT_M LT(10,KC_M)
+#define LYT_F LT(14,KC_F)
 
 // http://norvig.com/mayzner.html
 // th = 3.56% (Alternating hand bigram)
 // he = 3.07% (H is not home row)
 // in = 2.43%
-// er = 2.05% Alternating hand
-// an = 1.99% Alternating hand
-// re = 1.85% Alternating hand
+// er = 2.05% Alternating hand // ctrl 
+// an = 1.99% Alternating hand // win n
+// re = 1.85% Alternating hand // alt e
 // on = 1.76%
 // at = 1.49%
 // en = 1.45%
-// nd = 1.35% Alternating hand
-// ti = 1.34% Alternating hand
-// es = 1.34% Alternating hand
-// or = 1.28% Alternating hand
-// te = 1.20% Alternating hand
-// of = 1.17% Alternating hand
-// ed = 1.17% Alternating hand
-// is = 1.13% Alternating hand
-// it = 1.12% Alternating hand
-// al = 1.09% Alternating hand
+// nd = 1.35% Alternating hand // D
+// ti = 1.34% Alternating hand // I
+// es = 1.34% Alternating hand // ctrl s
+// or = 1.28% Alternating hand // run command redundant with simple windows key
+// te = 1.20% Alternating hand // E
+// of = 1.17% Alternating hand // win + f
+// ed = 1.17% Alternating hand // ctrl d
+// is = 1.13% Alternating hand // alt s
+// it = 1.12% Alternating hand // alt t
+// al = 1.09% Alternating hand // win l
 // ar = 1.07%
 // st = 1.05%
-// to = 1.04% Alternating hand
-// nt = 1.04% Alternating hand
-// ng = 0.95% Alternating hand
-// se = 0.93% Alternating hand
-// ha = 0.93% Alternating hand
+// to = 1.04% Alternating hand // O
+// nt = 1.04% Alternating hand // T 
+// ng = 0.95% Alternating hand // G
+// se = 0.93% Alternating hand // ctrl e
+// ha = 0.93% Alternating hand // non home row modifiers
 // as = 0.87%
 // ou = 0.87%
 // io = 0.83%
 // le = 0.83% no home row mods
 // ve = 0.83% no home row mods
-// co = 0.79% alternating hands
-// me = 0.79% no home row mods
+// co = 0.79% alternating hands 
+// me = 0.79% no home row mods 
 // de = 0.76% no howe row mods
 // hi = 0.73% no home row mods
-// ri = 0.73% Alternating hands
-// ro = 0.73% Alternating hands
-// ic = 0.70% Alternating hands
+// ri = 0.73% Alternating hands alt i
+// ro = 0.73% Alternating hands alt o
+// ic = 0.70% Alternating hands alt c
 // ne = 0.69%
 
 // Bigrams that do not exist jq, qg, qy, qz, wq, and qz
@@ -398,7 +459,14 @@ if (record->tap.count > 0) {
     // ou, in, st, en
   case HM_R:
     if (record->tap.count > 0) {
-      if (get_mods() & MOD_BIT(KC_LGUI)) {
+      if (get_mods() & MOD_BIT(KC_RGUI)) {
+	// or = 1.28% Alternating hand // run command redundant with simple windows key
+	unregister_mods(MOD_BIT(KC_RGUI));
+	tap_code(KC_O);
+	tap_code(KC_R);
+	add_mods(MOD_BIT(KC_RGUI));
+	return false;
+      } else if (get_mods() & MOD_BIT(KC_LGUI)) {
 	// ar 1.07% 
 	unregister_mods(MOD_BIT(KC_LGUI));
 	tap_code(KC_A);
@@ -408,7 +476,31 @@ if (record->tap.count > 0) {
       }
     }
     return true;
-  case KC_M:
+  case LYT_F:
+    //// of = 1.17% Alternating hand // win + f
+    if (record->tap.count > 0) {
+      if (get_mods() & MOD_BIT(KC_RGUI)) {
+	unregister_mods(MOD_BIT(KC_RGUI));
+	tap_code(KC_O);
+	tap_code(KC_F);
+	add_mods(MOD_BIT(KC_RGUI));
+	return false;
+      }
+    }
+    return true;
+  case LYT_L:
+    //al = 1.09% Alternating hand
+    if (record->tap.count > 0) {
+      if (get_mods() & MOD_BIT(KC_LGUI)) {
+	unregister_mods(MOD_BIT(KC_LGUI));
+	tap_code(KC_A);
+	tap_code(KC_L);
+	add_mods(MOD_BIT(KC_LGUI));
+	return false;
+      }
+    }
+    return true;
+  case LYT_M:
     // om bigraph
     if (record->tap.count > 0) {
       if (get_mods() & MOD_BIT(KC_RGUI)) {
@@ -427,7 +519,7 @@ if (record->tap.count > 0) {
       }
     }
     return true;
-  case KC_U:
+  case LYT_U:
     // handle ou case and send ou for gui right+u
     if (record->tap.count > 0) {
       if (get_mods() & MOD_BIT(KC_RGUI)) {
@@ -470,6 +562,13 @@ if (record->tap.count > 0) {
 	tap_code(KC_I);
 	tap_code(KC_N);
 	add_mods(MOD_BIT(KC_RALT));
+	return false;
+      } else if (current_mods & MOD_BIT(KC_LGUI))  {
+	//an = 1.99% Alternating hand
+	unregister_mods(MOD_BIT(KC_LGUI));
+	tap_code(KC_A);
+	tap_code(KC_N);
+	add_mods(MOD_BIT(KC_LGUI));
 	return false;
       } else if (current_mods & MOD_BIT(KC_RGUI)) {
 	// on 1.76%
@@ -536,7 +635,7 @@ if (record->tap.count > 0) {
       }
     }
     return true;
-  case LT_SPC:
+  case LYT_SPC:
     if (record->tap.count > 0) {
       if (get_mods() & MOD_BIT(KC_RSHIFT)) {
 	// n 
@@ -628,7 +727,7 @@ void dance_0_finished(qk_tap_dance_state_t *state, void *user_data) {
     dance_state[0].step = dance_step(state);
     switch (dance_state[0].step) {
         case SINGLE_TAP: register_code16(KC_Q); break;
-        case DOUBLE_TAP: register_code16(KC_Q); register_code16(KC_Q); break;
+        case DOUBLE_TAP: register_code16(LGUI(KC_L)); break;
         case DOUBLE_HOLD: register_code16(LGUI(KC_L)); break;
         case DOUBLE_SINGLE_TAP: tap_code16(KC_Q); register_code16(KC_Q);
     }
@@ -638,7 +737,7 @@ void dance_0_reset(qk_tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[0].step) {
         case SINGLE_TAP: unregister_code16(KC_Q); break;
-        case DOUBLE_TAP: unregister_code16(KC_Q); break;
+        case DOUBLE_TAP: unregister_code16(LGUI(KC_L)); break;
         case DOUBLE_HOLD: unregister_code16(LGUI(KC_L)); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(KC_Q); break;
     }

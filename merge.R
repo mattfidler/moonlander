@@ -14,18 +14,15 @@ keymap.c <- gsub(" SS_DELAY(100)", "", readLines(file.path(key.source, "keymap.c
 keymap.c <- gsub("SEND_STRING(SS_TAP(X_KP_2))", "SEND_STRING(\"matthew.fidler@gmail.com\")",
                  keymap.c, fixed=TRUE)
 
-#SEND_STRING(SS_LSFT(SS_TAP(X_R)) SS_TAP(X_X) SS_LSFT(SS_TAP(X_O)) SS_LSFT(SS_TAP(X_D)) SS_LSFT(SS_TAP(X_E)));
+keymap.c <- gsub("SEND_STRING(SS_TAP(X_KP_1))", "SEND_STRING(\"INTEGER\")",
+                 keymap.c, fixed=TRUE)
 
-w <- which(regexpr("SEND_STRING(SS_LSFT(SS_TAP(X_R))", keymap.c, fixed=TRUE) != -1)
-if (length(w) == 1) {
-  keymap.c[w] <- "if (record->tap.count > 0) {\n      if (get_mods() & MOD_BIT(KC_RALT)) {\n        SEND_STRING(\"REAL\");\n      } else { SEND_STRING(\"RxODE\");}\n      } else {SEND_STRING(\"RxODE\");}"
-}
 
-# SEND_STRING(SS_LSFT(SS_TAP(X_COMMA)) SS_TAP(X_MINUS))
-w <- which(regexpr("SEND_STRING(SS_LSFT(SS_TAP(X_COMMA))", keymap.c, fixed=TRUE) != -1)
-if (length(w) == 1) {
-  keymap.c[w] <- "if (record->tap.count > 0) {\n      if (get_mods() & MOD_BIT(KC_LALT)) {\n        SEND_STRING(\"->\");\n      } else { SEND_STRING(\"<-\");}\n      } else {SEND_STRING(\"<-\");}"
-}
+keymap.c <- gsub("SEND_STRING(SS_TAP(X_KP_3))", "SEND_STRING(\"PROTECT\")",
+                 keymap.c, fixed=TRUE)
+
+keymap.c <- gsub("SEND_STRING(SS_TAP(X_KP_4))", "SEND_STRING(\"matt.fidler@novartis.com\")",
+                 keymap.c, fixed=TRUE)
 
 
 w <- which(regexpr("process_record_user", keymap.c) != -1)
